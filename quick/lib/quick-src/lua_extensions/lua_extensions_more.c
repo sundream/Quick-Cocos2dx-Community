@@ -24,18 +24,26 @@ extern "C" {
 #include "unqlite/lunqlite.h"
 
 // protoc-gen-lua
-#include "protobuf/pb.h"
+//#include "protobuf/pb.h"
 
 #if CC_USE_SPROTO
 LUALIB_API int luaopen_lpeg (lua_State *L);
 LUALIB_API int luaopen_sproto_core(lua_State *L);
 #endif
 
+// skynet-crypt
+#include "lua-crypt/lua-crypt.h"
+
+// protobuf
+#include "lua-protobuf/lpb.h"
+
 static luaL_Reg luax_exts[] = {
     {"cjson", luaopen_cjson_safe},
     {"zlib", luaopen_zlib},
     {"pack", luaopen_pack},
     {"lfs", luaopen_lfs},
+    {"crypt",luaopen_crypt},
+    {"pb",luaopen_pb},
 #if CC_USE_SQLITE
     {"lsqlite3", luaopen_lsqlite3},
 #endif
@@ -43,7 +51,7 @@ static luaL_Reg luax_exts[] = {
 	{"unqlite", luaopen_lunqlite},
 #endif
 #if CC_USE_PROTOBUF
-    {"pb", luaopen_pb},
+    //{"pb", luaopen_pb},
 #endif
 #if CC_USE_SPROTO
     {"lpeg", luaopen_lpeg},
@@ -60,6 +68,7 @@ void luaopen_lua_extensions_more(lua_State *L)
     lua_getfield(L, -1, "preload");
     for (; lib->func; lib++)
     {
+		printf("name=%s,func=%p\n", lib->name, lib->func);
         lua_pushcfunction(L, lib->func);
         lua_setfield(L, -2, lib->name);
     }
