@@ -19,13 +19,13 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -181,6 +181,9 @@ xcopy /Y /Q "$(TargetPath)" "$(ProjectDir)..\win32\"</Command>
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\lpeg\lptree.h" />
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\lpeg\lptypes.h" />
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\lpeg\lpvm.h" />
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\lua-crypt\lua-crypt.h" />
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\lua-protobuf\lpb.h" />
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\lua-protobuf\pb.h" />
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.h" />
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\sproto\msvcint.h" />
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\sproto\sproto.h" />
@@ -272,6 +275,10 @@ xcopy /Y /Q "$(TargetPath)" "$(ProjectDir)..\win32\"</Command>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\lua-crypt\lsha1.c" />
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\lua-crypt\lua-crypt.c" />
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\lua-protobuf\pb.c" />
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.c" />
     <ClCompile Include="..\..\lib\quick-src\lua_extensions\sproto\lsproto.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -313,14 +320,6 @@ xcopy /Y /Q "$(TargetPath)" "$(ProjectDir)..\win32\"</Command>
     <ClCompile Include="..\Classes\PlayerSettings.cpp" />
     <ClCompile Include="..\Classes\PlayerTaskServiceProtocol.cpp" />
     <ClCompile Include="..\Classes\PlayerUtils.cpp" />
-    <ClCompile Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </ForcedIncludeFiles>
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</CompileAs>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </ForcedIncludeFiles>
-    </ClCompile>
     <ClCompile Include="..\..\lib\quick-src\extra\crypto\base64\libbase64.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</CompileAs>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

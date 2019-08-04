@@ -64,9 +64,6 @@
     <Filter Include="Classes\player">
       <UniqueIdentifier>{43bbd7f7-5fe3-4b04-99ce-da7fc19dbe49}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\quick-src\lua_extensions\protobuf">
-      <UniqueIdentifier>{0e2bbe5b-e4f1-48a7-92e1-c3b1e82a39d3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\quick-src\lua_extensions\unqlite">
       <UniqueIdentifier>{220ff569-ecf6-4888-9abb-24a8bfd17973}</UniqueIdentifier>
     </Filter>
@@ -75,6 +72,15 @@
     </Filter>
     <Filter Include="Classes\quick-src\lua_extensions\lpeg">
       <UniqueIdentifier>{8d438074-a2dd-4316-8006-592a849bf3fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\quick-src\lua_extensions\protobuf">
+      <UniqueIdentifier>{cf37f12d-4a0c-4a9a-a5ff-52aa32c03676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\quick-src\lua_extensions\lua-crypt">
+      <UniqueIdentifier>{d2f4f584-7c9a-4e9c-bc3f-dd7910e76cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\quick-src\lua_extensions\lua-protobuf">
+      <UniqueIdentifier>{84e654fd-1abf-4684-88f7-83e908e2b23b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -210,9 +216,6 @@
     <ClInclude Include="..\Classes\UncaughtExceptionHandler.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.h">
-      <Filter>Classes\quick-src\lua_extensions\protobuf</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\unqlite\lunqlite.h">
       <Filter>Classes\quick-src\lua_extensions\unqlite</Filter>
     </ClInclude>
@@ -242,6 +245,18 @@
     </ClInclude>
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\lpeg\lpvm.h">
       <Filter>Classes\quick-src\lua_extensions\lpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.h">
+      <Filter>Classes\quick-src\lua_extensions\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\lua-crypt\lua-crypt.h">
+      <Filter>Classes\quick-src\lua_extensions\lua-crypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\lua-protobuf\lpb.h">
+      <Filter>Classes\quick-src\lua_extensions\lua-protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\lua-protobuf\pb.h">
+      <Filter>Classes\quick-src\lua_extensions\lua-protobuf</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -359,9 +374,6 @@
     <ClCompile Include="UncaughtExceptionHandler_win32.cpp">
       <Filter>Classes\player</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.c">
-      <Filter>Classes\quick-src\lua_extensions\protobuf</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\lib\quick-src\lua_extensions\unqlite\lunqlite.c">
       <Filter>Classes\quick-src\lua_extensions\unqlite</Filter>
     </ClCompile>
@@ -388,6 +400,18 @@
     </ClCompile>
     <ClCompile Include="..\..\lib\quick-src\lua_extensions\lpeg\lpvm.c">
       <Filter>Classes\quick-src\lua_extensions\lpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\protobuf\pb.c">
+      <Filter>Classes\quick-src\lua_extensions\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\lua-crypt\lsha1.c">
+      <Filter>Classes\quick-src\lua_extensions\lua-crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\lua-crypt\lua-crypt.c">
+      <Filter>Classes\quick-src\lua_extensions\lua-crypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\lua-protobuf\pb.c">
+      <Filter>Classes\quick-src\lua_extensions\lua-protobuf</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
